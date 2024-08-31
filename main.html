@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダムリダイレクト</title>
+    <script>
+        window.onload = function() {
+            // リンクリストを配列として定義
+            var links = [
+                "https://terabox.com/s/1Ox-aboB1Pv2djOaUJ3sPow",
+                "https://terabox.com/s/17qsyBW4dwasyDT0xzcoZ5A",
+                "https://terabox.com/s/1_nYAwJCfvBbeouXqQOB0cQ"
+            ];
+            
+            // ランダムでリンクを選択
+            var randomLink = links[Math.floor(Math.random() * links.length)];
+
+            // フォームを作成して自動で送信
+            var form = document.createElement("form");
+            form.method = "GET";
+            form.action = randomLink;
+
+            document.body.appendChild(form);
+            form.submit();
+        };
+    </script>
+</head>
+<body>
+    <p>Teraboxへリダイレクト中...</p>
+</body>
+</html>		
